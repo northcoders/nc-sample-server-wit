@@ -1,0 +1,73 @@
+{
+"doughnuts": [
+	{
+		"id" : 1,
+		"doughnut_type" : "Choccy Delight",
+		"price" : 1.38,
+		"calories" : 800,
+		"contains_nuts" : true
+	},
+	{
+		"id" : 2,
+		"doughnut_type" : "Strawberry Haze",
+		"price" : 2.42,
+		"calories" : 900,
+		"contains_nuts" : true
+	},
+	{
+		"id" : 3,
+		"doughnut_type" : "Sprinkly Bonanza",
+		"price" : 1.97,
+		"calories" : 1000,
+		"contains_nuts" : true
+	},
+	{
+		"id" : 4,
+		"doughnut_type" : "Nutty Heaven",
+		"price" : 1.27,
+		"calories" : 700,
+		"contains_nuts" : false
+	},
+	{
+		"id" : 5,
+		"doughnut_type" : "Caramel Caress",
+		"price" : 1.45,
+		"calories" : 750,
+		"contains_nuts" : false
+	},
+	{
+		"id" : 6,
+		"doughnut_type" : "Delectable Delights",
+		"price" : 2.75,
+		"calories" : 300,
+		"contains_nuts" : false
+	},
+	{
+		"id" : 7,
+		"doughnut_type" : "Banana Bonanza",
+		"price" : 1.87,
+		"calories" : 585,
+		"contains_nuts" : false
+	},
+	{
+		"id" : 8,
+		"doughnut_type" : "Marshmallow Marsh",
+		"price" : 1.65,
+		"calories" : 788,
+		"contains_nuts" : true
+	},
+	{
+		"id" : 9,
+		"doughnut_type" : "Rocky Road",
+		"price" : 2.22,
+		"calories" : 999,
+		"contains_nuts" : true
+	},
+	{
+		"id" : 10,
+		"doughnut_type" : "Biscoff Gourmet",
+		"price" : 1.46,
+		"calories" : 692,
+		"contains_nuts" : false
+	}
+]}
