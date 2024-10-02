@@ -1,6 +1,6 @@
-# The NC Merch API
+# The NC Doughnuts API
 
-This API concerns sales of highly desirable merch from the coffers of Northcoders.
+This API concerns sales of yummy doughnuts from the Northcoders bakery.
 
 To run the API locally, you will need a file of environment variables that is not saved in source control. If you are authorised to view this API, you will have received the relevant file. Then:
 1. Fork and clone the repo.
