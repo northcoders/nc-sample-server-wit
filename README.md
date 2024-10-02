@@ -23,6 +23,6 @@ To run the API locally, you will need a file of environment variables that is no
     make start-server
     ```
 1. In your browser, navigate to `localhost:8000/docs/` to view the API documentation page.
-1. Then you can navigate to the endpoint of your choice, e.g. `localhost:8000/api/categories`.
+1. Then you can navigate to the endpoint of your choice, e.g. `localhost:8000/api/doughnuts`.
 
 API logs are available in `logs/app.log`.
