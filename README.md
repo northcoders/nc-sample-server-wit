@@ -13,7 +13,6 @@ To run the API locally, you will need a file of environment variables that is no
     ```bash
     make dev-setup
     ```
-1. Add the supplied `.env` file to the root level of the project.
 1. Run the tests.
     ```bash
     make run-checks
