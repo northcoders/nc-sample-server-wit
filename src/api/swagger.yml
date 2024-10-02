@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: "NC Tech Test REST API"
+  title: "NC Sample REST API"
   description: "REST API with some extremely useless endpoints"
   version: "1.0.0"
 
@@ -9,132 +9,73 @@ servers:
 
 components:
   schemas:
-    Product:
+    Doughnut:
       type: object
       required:
-        - id
-        - title
-        - description
-        - cost 
-        - category
+        - doughnut_id
+        - doughnut_type
+        - price
+        - calories
+        - contains_nuts
       properties:
-        id:
+        doughnut_id:
           type: integer
-        title:
+        doughnut_type:
           type: string
-        description: 
-          type: string
-        cost: 
+        price: 
           type: number
-        category: 
-          type: string
+        calories:
+          type: number
+        contains_nuts: 
+          type: boolean
 
   parameters:
-    UserParam:
+    DoughnutParam:
       in: path 
-      name: user_id
+      name: doughnut_id
       required: true
       schema: 
         type: integer
         minimum: 1
-      description: "The User Id"
-    ProductParam:
-      in: path 
-      name: product_id
-      required: true
-      schema: 
-        type: integer
-        minimum: 1
-      description: "The Product Id"
-    DateFromParam:
-      in: query 
-      name: date_from
-      required: true
-      schema:
-        type: string
-        format: date
-      description: "The earliest date, in the format YYYY-MM-DD"
-    DateToParam:
-      in: query 
-      name: date_to
-      required: true
-      schema:
-        type: string
-        format: date
-      description: "The latest date, in the format YYYY-MM-DD"
+      description: "The Doughnut Id"
 
 
 paths:
-  /categories:
+  /healthcheck:
     get:
-      operationId: "routes.get_categories"
+      operationId: "app.get_healthcheck"
       tags:
-        - "Categories"
-      summary: "Get the list of all product Categories"
+        - "Healthcheck"
+      summary: "Simple healthcheck"
       responses:
         "200":
-          description: "Successfully read Categories"
-  /products:
+          description: "Application is healthy"
+  /doughnuts:
     get:
-      operationId: "routes.get_products"
+      operationId: "app.get_doughnuts"
       tags:
-        - "Products"
-      summary: "Get the list of all Products"
+        - "Doughnuts"
+      summary: "Get the list of all Doughnuts"
       responses:
         "200":
-          description: "Successfully read Products"
-  /products/{product_id}: 
-    get:
-      parameters:
-        - $ref: '#/components/parameters/ProductParam'
-      operationId: "routes.get_product"
-      tags:
-        - "Product"
-      summary: "Get details of single product"
-      responses:
-        "200":
-          description: "Successfully read Product details"
-  /users:
-    get: 
-      operationId: "routes.get_users"
-      tags:
-        - "Users"
-      summary: "Get details of all Users"
-      responses:
-        "200":
-          description: "Successfully read Users"
-  /users/{user_id}/sales/latest:
+          description: "Successfully read Doughnuts"
+        "404":
+          description: "No doughnuts"
+        "500":
+          description: "Unexpected exception"
+  /doughnuts/{doughnut_id}: 
     get:
       parameters:
-        - $ref: '#/components/parameters/UserParam'
-      operationId: "routes.get_user_sales_latest"
+        - $ref: '#/components/parameters/DoughnutParam'
+      operationId: "app.get_doughnut"
       tags:
-        - "User Latest"
-      summary: "Returns User's latest sales (up to five)"
+        - "Doughnut"
+      summary: "Get details of single doughnut"
       responses:
         "200":
-          description: "Successfully returned User's latest sales"
-  /users/{user_id}/sales:
-    get:
-      parameters:
-        - $ref: '#/components/parameters/UserParam'
-        - $ref: '#/components/parameters/DateFromParam'
-        - $ref: '#/components/parameters/DateToParam'
-      operationId: "routes.get_user_sales"
-      tags:
-        - "User Sales"
-      summary: "Computes and returns user's average spend"
-      responses:
-        "200":
-          description: "Successfully returned user average spend"
-  /users/{user_id}/average_spend:
-    get:
-      parameters:
-        - $ref: '#/components/parameters/UserParam'
-      operationId: "routes.get_user_average_spend"
-      tags:
-        - "User Average"
-      summary: "Computes and returns User's average spend"
-      responses:
-        "200":
-          description: "Successfully returned User average spend"
+          description: "Successfully read Doughnut details"
+        "404":
+          description: "No such doughnut"
+        "500":
+          description: "Unexpected exception"
+  
