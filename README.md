@@ -2,7 +2,7 @@
 
 This API concerns sales of yummy doughnuts from the Northcoders bakery.
 
-To run the API locally, you will need a file of environment variables that is not saved in source control. If you are authorised to view this API, you will have received the relevant file. Then:
+To run the API locally:
 1. Fork and clone the repo.
 1. Ensure that your Python interpreter is Python at least 3.11.x - you may use a tool like `pyenv`.
 1. In the root of the project, create the run environment with:
