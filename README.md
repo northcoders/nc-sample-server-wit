@@ -2,6 +2,10 @@
 
 This API concerns sales of yummy doughnuts from the Northcoders bakery.
 
+The code should be deployable in any Unix-like OS. The build process outlined below requires Python
+be installed along with [GNU Make](https://www.gnu.org/software/make/). MacOS users can get access
+to the `make` command via Homebrew or MacOS Command Line Tools. 
+
 To run the API locally:
 1. Fork and clone the repo.
 1. Ensure that your Python interpreter is Python at least 3.11.x - you may use a tool like `pyenv`.
