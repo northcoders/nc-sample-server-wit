@@ -20,6 +20,12 @@ PORT = 8000
 app = FastAPI()
 
 
+@app.get("/api/healthcheck")
+def get_healthcheck() -> str:
+    """Simple healthcheck endpoint."""
+    return "Application is healthy"
+
+
 @app.get("/api/doughnuts")
 def get_doughnuts() -> list[dict]:
     """Gets list of all doughnuts.

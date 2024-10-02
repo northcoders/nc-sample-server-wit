@@ -27,6 +27,14 @@ def test_doughnuts_id(client):
 
 
 @pytest.mark.describe("Integration tests")
+@pytest.mark.it("Healthcheck response")
+def test_healthcheck(client):
+    result = client.get("/api/healthcheck")
+    assert result.status_code == 200
+    assert result.json() == "Application is healthy"
+
+
+@pytest.mark.describe("Integration tests")
 @pytest.mark.it("Error response for missing doughnut")
 def test_doughnut_error_integration(client):
     result = client.get("/api/doughnuts/88")
