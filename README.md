@@ -9,6 +9,9 @@ to the `make` command via Homebrew or MacOS Command Line Tools.
 ## Local Deployment
 
 To run the API **locally**:
+## Local Deployment
+
+To run the API **locally**:
 1. Fork and clone the repo.
 1. Ensure that your Python interpreter is Python at least 3.11.x - you may use a tool like `pyenv`.
 1. In the root of the project, create the run environment with:
