@@ -18,3 +18,4 @@ venv/
 **/.terraform*
 .env
 logs/
+**/terraform.tfstate*

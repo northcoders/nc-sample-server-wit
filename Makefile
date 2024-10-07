@@ -4,7 +4,7 @@
 #
 #################################################################################
 
-PROJECT_NAME = nc-sample-server
+PROJECT_NAME = nc-sample-server-wit
 REGION = eu-west-2
 PYTHON_INTERPRETER = python3
 WD=$(shell pwd)
