@@ -31,7 +31,7 @@ To run the API **locally**:
     make start-server
     ```
 1. In your browser, navigate to `localhost:8000/docs/` to view the API documentation page.
-1. Then you can navigate to the endpoint of your choice, e.g. `localhost:8000/api/doughnuts`.
+1. Then you can navigate to the endpoint of your choice, e.g. `localhost:8000/api/doughnuts`. This could be done in your browser, but a tool like [Insomnia](https://insomnia.rest/) is very useful.
 
 API logs are available in `logs/app.log`.
 
@@ -43,11 +43,13 @@ This is an exercise for you! You should begin by getting [Free Tier access to AW
 
 You can try to do this manually using the console. Use the EC2 wizard to set up an instance as in the demonstration.
 
-However, it is _much_ better to deploy the API via Terraform. You will need to [install it](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) first.
+However, it is _much_ better to deploy the API via Terraform. You will need to [install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) first.
+
+**This is a tough exercise but it can teach you a lot about AWS and Infrastructure as Code.**
 
 Then, working in the `terraform` directory, you will need to use the `terraform init` command to get started.
 
-Edit the provided `.tf` files to create the desired resources. Some hints are given. There are lots of challenges here! 
+Edit the provided `.tf` files to create the desired resources. We have already created the provider in `main.tf`. Some hints are given in the files. There are lots of challenges here! 
 You will need to use the Terraform and AWS documentation together to figure out what needs to be done.
 
 Some useful resources:

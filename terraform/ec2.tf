@@ -5,6 +5,7 @@ resource "aws_instance" "my_server" {
     # How will you specify the instance type?
     # How will you access the instance?
     # How will you execute commands on the instance to set up the server?
+    # (Hint: investigate the User Data configuration.)
     # How will you know the IP address of the instance?
     # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
 
